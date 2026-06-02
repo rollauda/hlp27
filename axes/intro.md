@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-slug: /axes
+slug: /
 title: Axes du programme
 ---
 

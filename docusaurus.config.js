@@ -112,8 +112,6 @@ const config = {
         items: [
           {to: '/premiere/', label: 'Première', position: 'left', activeBaseRegex: `/premiere/`},
           {to: '/terminale/', label: 'Terminale', position: 'left', activeBaseRegex: `/terminale/`},
-          {to: '/axes/', label: 'Axes', position: 'left', activeBaseRegex: `/axes/`},
-          {to: '/auteurs/', label: 'Auteurs', position: 'left', activeBaseRegex: `/auteurs/`},
           {to: '/methode/intro', label: 'Méthode', position: 'left', activeBaseRegex: `/methode/`},
           {href: 'https://www.profauda.fr/', label: 'Accueil-Auda', position: 'right'},
         ],

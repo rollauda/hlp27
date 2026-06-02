@@ -1,6 +1,6 @@
 ---
 sidebar_position: 0
-slug: /methode/intro
+slug: /intro
 title: Méthode
 ---
 
