@@ -4,13 +4,17 @@ Site Docusaurus de la spécialité **Humanités, Littérature, Philosophie** (Pr
 
 ## Structure (plugins docs)
 
-| Section | URL | Source |
-|---|---|---|
-| Première | `/premiere/` | `premiere/` |
-| Terminale | `/terminale/` | `terminale/` |
-| Axes | `/axes/` | `axes/` |
-| Auteurs | `/auteurs/` | `auteurs/` |
-| Méthode | `/methode/` | `methode/` |
+| Section | URL | Source | Dans le menu |
+|---|---|---|---|
+| Première | `/premiere/` | `premiere/` | oui |
+| Terminale | `/terminale/` | `terminale/` | oui |
+| Méthode | `/methode/intro` | `methode/` | oui |
+| Axes | `/axes/` | `axes/` | non (masqué) |
+| Auteurs | `/auteurs/` | `auteurs/` | non (masqué) |
+
+> **Axes** et **Auteurs** existent (pages générées, accessibles par URL) mais sont retirés de la navbar. Pour les réafficher : remettre les deux lignes correspondantes dans `themeConfig.navbar.items` de `docusaurus.config.js`.
+
+> Chaque section est un plugin docs avec son propre `routeBasePath`. Le `slug` dans `intro.md` est **relatif** au routeBasePath → `slug: /` (et `slug: /intro` pour `methode/`), sinon la route est doublée (`/premiere/premiere`) et les liens du menu cassent.
 
 Les leçons sont publiées par `/hlp-publier-lecon` depuis le coffre IPCRA (`1 PROJETS/Lycee/prepa-hlp/`).
 
@@ -22,12 +26,21 @@ npm start        # serveur local
 npm run build    # build de production
 ```
 
-## Étapes restantes (scaffold local — à finaliser par Rolland)
+> **Réglages de version (sinon le build échoue après un `npm install` neuf)** :
+> - Tous les paquets `@docusaurus/*` sont épinglés à la **même** version exacte (`3.7.0`, sans `^`). Sinon `theme-mermaid` part en 3.10.x et casse la vérification de version.
+> - `package.json` contient `"overrides": { "webpack": "5.95.0" }` : les webpack récents (5.107+) durcissent le schéma de `ProgressPlugin` et font planter `webpackbar@6`.
 
-1. **`npm install`** puis **`npm run build`** pour valider le scaffold (non testé à la création).
-2. **Créer le dépôt GitHub** `rollauda/hlp27` et `git push` (le déploiement GitHub Pages est déjà câblé dans `.github/workflows/deploy.yml`).
-3. **DNS** : faire pointer `hlp27.profauda.fr` (placeholder) puis basculer `hlp.profauda.fr` à la rentrée ; figer `hlp25` en lecture seule.
-4. **Script de publication** : adapter `publier-lecon.py` de phil27 pour les deux niveaux (`premiere/` + `terminale/`) — voir `/hlp-publier-lecon`.
-5. Affiner branding (favicon, logo, couleurs `src/css/custom.css`) si souhaité.
+## Statut du déploiement
 
-> Créé le 2026-06-02 par scaffold local depuis phil27. **Aucun dépôt distant créé ni push effectué** (en attente de confirmation de Rolland).
+- ✅ Dépôt `rollauda/hlp27` (public), `main` poussée, CI `deploy.yml` opérationnelle.
+- ✅ GitHub Pages activé depuis la branche `gh-pages`, CNAME `hlp27.profauda.fr`.
+- URL par défaut en attendant le DNS : https://rollauda.github.io/hlp27/
+
+## Étapes restantes
+
+1. **DNS** : faire pointer `hlp27.profauda.fr` vers GitHub Pages (CNAME `hlp27` → `rollauda.github.io`, ou les 4 A records d'apex `185.199.108–111.153`). Puis cocher **Enforce HTTPS** dans Settings → Pages une fois le certificat émis. Basculer `hlp.profauda.fr` à la rentrée ; figer `hlp25` en lecture seule.
+2. **Script de publication** : adapter `publier-lecon.py` de phil27 pour les deux niveaux (`premiere/` + `terminale/`) — voir `/hlp-publier-lecon`.
+3. Affiner branding (favicon, logo, couleurs `src/css/custom.css`) si souhaité.
+4. **Maintenance CI** : les actions du workflow tournent sur Node 20 (déprécié, retrait des runners prévu sept. 2026). Bumper `actions/checkout`, `actions/setup-node` et `peaceiris/actions-gh-pages` quand l'occasion se présente.
+
+> Scaffold créé le 2026-06-02 depuis phil27, mis en production le même jour (palette verte reprise de hlp25, menu réduit à Première · Terminale · Méthode).
