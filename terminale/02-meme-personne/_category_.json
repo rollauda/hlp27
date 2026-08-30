@@ -1,0 +1,8 @@
+{
+  "label": "Sommes-nous toujours la même personne ?",
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "index"
+  }
+}
