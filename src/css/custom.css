@@ -173,3 +173,33 @@ table th {
 table td, table th {
   border: 1px solid #dee2e6 !important;
 }
+
+/* ------------------------------------------------------------------ */
+/* Têtes de semestre dans la sidebar (frontmatter sidebar_class_name)  */
+/* Ces entrées doivent se lire comme des intertitres, pas comme des    */
+/* leçons. Classe partagée avec phil27 et dgemc27 — d'où son nom       */
+/* « chapitre », qui en HLP désigne un SEMESTRE (le mot « chapitre »   */
+/* y vaut pour « axe » : ne pas l'employer dans le texte visible).     */
+/* ------------------------------------------------------------------ */
+/* Trois structures possibles selon ce que contient la page :          */
+/*  · doc seul                    <li class="… chapitre"><a>          */
+/*  · catégorie sans sous-page    idem — Docusaurus la rend en lien   */
+/*  · catégorie AVEC sous-pages   <li class="… chapitre"><div><a>     */
+/* Le troisième cas est celui d'une page de semestre complète (index  */
+/* + diaporama + textes) : sans le sélecteur du milieu, le lien reste */
+/* stylé comme une leçon ordinaire.                                   */
+.menu__list-item.chapitre > .menu__link,
+.menu__list-item.chapitre > .menu__list-item-collapsible > .menu__link,
+.menu__link.chapitre {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  color: var(--ifm-color-primary);
+}
+
+.menu__list-item.chapitre {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  padding-top: 0.6rem;
+}
