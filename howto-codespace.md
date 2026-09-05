@@ -15,14 +15,14 @@ git push                               # 3. envoyer — le site est en ligne 1 �
 Une leçon publiée, ce sont **deux endroits** — la page et son PDF :
 
 ```bash
-git add terminale/03-recherche-de-soi/ static/pdf/03-recherche-de-soi.pdf
+git add terminale/03-recherche-de-soi/ static/pdf/Terminale/S1/A2/03-recherche-de-soi.pdf
 ```
 
 ## Avant de pousser : les vérifications qui comptent
 
 0. **Regarder `git status`.** `git add -A` prend tout ce qui a changé, à l'instant où vous le lancez. Les dossiers lourds (`.venv/`, `node_modules/`, `build/`) sont ignorés, il n'y a donc rien à craindre de ce côté — mais si une publication est en cours depuis le coffre, vous commiteriez un état à moitié écrit. Un coup d'œil suffit à l'éviter.
 1. **`npm run build` passe.** Un lien mort fait échouer la construction, et le site reste alors sur sa version précédente.
-2. **Le PDF de la leçon est dans le commit.** C'est le piège le plus fréquent : une page qui embarque un PDF non commité s'affiche parfaitement en local et reste **vide en ligne**. Ici les PDF sont à plat dans `static/pdf/`, un fichier par leçon.
+2. **Le PDF de la leçon est dans le commit.** C'est le piège le plus fréquent : une page qui embarque un PDF non commité s'affiche parfaitement en local et reste **vide en ligne**. Depuis le 2026-09-05 ils sont **rangés par niveau, semestre et axe** : `static/pdf/<Niveau>/S<n>/[A<n>/]<slug>.pdf`. Le générateur écrit le fichier et la page qui le référence à partir du même chemin, ils ne peuvent donc pas diverger — mais `npm run build` ne contrôle **pas** les PDF : `onBrokenLinks` ne voit que les liens entre pages. Un PDF absent du commit donne une page qui se construit sans erreur et reste vide en ligne.
 3. **Le bon niveau.** Une leçon de Première publiée dans `terminale/` ne provoque aucune erreur — elle apparaît simplement au mauvais endroit dans le menu. Vérifier avant de pousser.
 4. **Rien de personnel.** Ce dépôt est **public** : pas de corrigé réservé, pas de nom d'élève, pas de document sous droits qu'on ne veut pas diffuser.
 
