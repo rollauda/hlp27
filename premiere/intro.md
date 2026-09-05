@@ -4,6 +4,8 @@ slug: /
 title: Première HLP
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 # Spécialité Première HLP — Partie philosophie 
 
 Les leçons de philosophie de la Première Spécialité Humanités, Littérature, Philosophie.
@@ -14,3 +16,9 @@ Les leçons de philosophie de la Première Spécialité Humanités, Littérature
 - **Semestre 2 — Les représentations du monde** : découverte du monde et pluralité des cultures · décrire, figurer, imaginer · l'homme et l'animal.
 
 > Les leçons sont publiées au fil de l'année.
+
+## Fiche de présentation
+
+<embed src={useBaseUrl('/pdf/Premiere/presentation-1HLP.pdf')} type="application/pdf" width="100%" height="700px" />
+
+→ [Ouvrir le PDF dans un nouvel onglet](pathname:///pdf/Premiere/presentation-1HLP.pdf)
