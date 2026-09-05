@@ -4,9 +4,9 @@ slug: /
 title: Première HLP
 ---
 
-# Spécialité HLP — Première
+# Spécialité Première HLP — Partie philosophie 
 
-Les leçons de spécialité Humanités, Littérature, Philosophie de la classe de Première.
+Les leçons de philosophie de la Première Spécialité Humanités, Littérature, Philosophie.
 
 ## Programme
 

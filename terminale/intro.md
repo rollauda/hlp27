@@ -4,9 +4,9 @@ slug: /
 title: Terminale HLP
 ---
 
-# Spécialité HLP — Terminale
+# Spécialité Terminale HLP — Partie philosophie 
 
-Les leçons de spécialité Humanités, Littérature, Philosophie de la classe de Terminale, en vue de l'épreuve écrite du baccalauréat (question d'interprétation + essai) et du Grand Oral.
+Les leçons de philosophie de la Terminale Spécialité Humanités, Littérature, Philosophie, en vue de l'épreuve écrite du baccalauréat (question d'interprétation + essai) et du Grand Oral.
 
 ## Programme
 
