@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/philo.svg',
 
   // TODO bascule prod : remplacer par https://hlp.profauda.fr quand hlp27 prend la suite de hlp25
-  url: 'https://hlp27.profauda.fr',
+  url: 'https://hlp.profauda.fr',
   baseUrl: '/',
 
   organizationName: 'rollauda',
