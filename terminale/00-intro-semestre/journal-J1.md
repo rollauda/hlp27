@@ -1,5 +1,5 @@
 ---
-id: journal-G1
+id: journal-J1
 sidebar_position: 3
 title: "Journal philosophique"
 ---
@@ -9,7 +9,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 # Journal philosophique
 
 <iframe
-  src={useBaseUrl('/slides/00-intro-semestre-journal-G1/index.html')}
+  src={useBaseUrl('/slides/00-intro-semestre-journal-J1/index.html')}
   style={{width: '100%', aspectRatio: '16 / 9', border: 'none'}}
   allowFullScreen
 ></iframe>
@@ -18,6 +18,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## La consigne
 
-<embed src={useBaseUrl('/pdf/Terminale/S1/00-intro-semestre-journal-G1.pdf')} type="application/pdf" width="100%" height="700px" />
+<embed src={useBaseUrl('/pdf/Terminale/S1/00-intro-semestre-journal-J1.pdf')} type="application/pdf" width="100%" height="700px" />
 
-→ [Ouvrir le PDF dans un nouvel onglet](pathname:///pdf/Terminale/S1/00-intro-semestre-journal-G1.pdf)
+→ [Ouvrir le PDF dans un nouvel onglet](pathname:///pdf/Terminale/S1/00-intro-semestre-journal-J1.pdf)
