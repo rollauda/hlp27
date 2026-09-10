@@ -78,4 +78,6 @@ Les commandes de publication sont **les mêmes** que ci-dessus.
 
 ## Adresse
 
-Le site est servi sur **hlp27.profauda.fr**. Il doit prendre **hlp.profauda.fr**, que sert encore `hlp25` — bascule décidée mais **volontairement différée**, le temps que le début d'année soit prêt. Elle demande de libérer le domaine côté `hlp25` **avant** de le réclamer ici : GitHub n'accepte pas qu'un domaine soit revendiqué par deux dépôts.
+Le site est servi sur **hlp.profauda.fr** depuis le 2026-09-05. Le site 2025-26 est archivé sur **hlp26.profauda.fr**, où il reste consultable.
+
+⚠️ L'ancienne adresse `hlp27.profauda.fr` **n'est plus servie** et renvoie une 404 sèche : GitHub Pages ne permet aucune redirection. Si vous l'avez diffusée, elle ne mène plus nulle part.
