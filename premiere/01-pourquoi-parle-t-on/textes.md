@@ -8,6 +8,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 # Textes de la leçon
 
-<embed src={useBaseUrl('/pdf/Premiere/S1/01-pourquoi-parle-t-on.pdf')} type="application/pdf" width="100%" height="700px" />
+<embed src={useBaseUrl('/pdf/Premiere/S1/A1/01-pourquoi-parle-t-on.pdf')} type="application/pdf" width="100%" height="700px" />
 
-→ [Ouvrir le PDF dans un nouvel onglet](pathname:///pdf/Premiere/S1/01-pourquoi-parle-t-on.pdf)
+→ [Ouvrir le PDF dans un nouvel onglet](pathname:///pdf/Premiere/S1/A1/01-pourquoi-parle-t-on.pdf)
